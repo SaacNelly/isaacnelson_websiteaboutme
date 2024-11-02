@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="pagetitle">
+        <h1 style="color: purple;">Register</h1>
+    </div>
+    <%if(name){ %>  
+    <p>Entered student name is: <%=name%></p>
+    <p>Entered student ID is: <%=id%></p>
+    <p>Entered dinosaur is: <%=fd%></p>
+    <%}%>
+
+    <form method="POST" action="/register">
+
+        <label for="name"></label>
+        <input type="text" id="name" name="std_name" class="form" placeholder="Enter student name">
+
+        <label for="id"></label>
+        <input type="number" id="id" name="std_id" class="form" placeholder="Enter student ID">
+
+        <label for="fd"></label>
+        <input type="text" id="fd" name="std_fd" class="form" placeholder="Enter your favorite dinosaur" size="22">
+
+        <button>Submit</button>
+    </form>
+</body>
